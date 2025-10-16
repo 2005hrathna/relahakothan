@@ -25,9 +25,9 @@ if (yearEl) {
 
 function showPage(id) {
   pages.forEach(page => {
-    page.style.visibility = 'hidden';
+    page.style.display = none;
   });
-  document.getElementById(id).style.visibility = 'visible';
+  document.getElementById(id).style.display = block;
 }
 
 homeLink.onclick = () => showPage('homePage');
@@ -40,3 +40,4 @@ function openArticle(id) {
   content.innerHTML = `<h2>${article.title}</h2>${article.content}`;
   showPage('articlePage');
 }
+
